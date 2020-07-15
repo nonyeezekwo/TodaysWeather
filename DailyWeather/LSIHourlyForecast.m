@@ -50,8 +50,6 @@
     NSString *summary = dictionary[@"summary"];
     NSString *icon = dictionary[@"icon"];
     NSNumber *precipProbability = dictionary[@"precipProbability"];
-    NSNumber *sunriseTime = dictionary[@"sunriseTime"];
-    NSNumber *sunsetTime = dictionary[@"sunsetTime"];
     NSNumber *precipIntensity = dictionary[@"precipIntensity"];
     NSString *precipType = dictionary[@"precipType"];
     NSNumber *temperatureLow = dictionary[@"temperatureLow"];
@@ -69,8 +67,6 @@
           summary &&
           icon &&
           precipProbability &&
-          sunriseTime &&
-          sunsetTime &&
           precipIntensity &&
           precipType &&
           temperatureLow &&
