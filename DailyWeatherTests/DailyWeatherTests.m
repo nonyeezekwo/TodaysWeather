@@ -7,6 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "LSIWeatherForcast.h"
+#import "LSIFileHelper.h"
+#import "LSIDailyForecast.h"
+
 
 @interface DailyWeatherTests : XCTestCase
 
@@ -20,6 +24,18 @@
     
     // TODO: Create Unit Tests for each separate JSON file
 
+}
+
+- (void)testLoadingDailyWeather {
+
+    NSData *data = loadFile(@"DailyWeather.json", [LSIDailyForecast class]);
+    NSError *jsonError = nil;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+    if (jsonError) {
+        NSLog(@"Error with JSON,error: %@", jsonError);
+    }
+    NSLog(@"JSON: %@", json);
+    
 }
 
 @end
