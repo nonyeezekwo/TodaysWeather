@@ -46,7 +46,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     
-    NSDate *time = dictionary[@"time"];
+    NSNumber *timeNumber = dictionary[@"time"];
     NSString *summary = dictionary[@"summary"];
     NSString *icon = dictionary[@"icon"];
     NSNumber *precipProbability = dictionary[@"precipProbability"];
@@ -58,6 +58,8 @@
     NSNumber *windBearing = dictionary[@"windBearing"];
     NSNumber *windSpeed = dictionary[@"windSpeed"];
     NSNumber *uvIndex = dictionary[@"uvIndex"];
+    
+    NSDate *time = [NSDate dateWithTimeIntervalSince1970:timeNumber.longValue / 1000.0];
     // TODO - if statements
     
     
