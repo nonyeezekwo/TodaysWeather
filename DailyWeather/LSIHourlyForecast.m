@@ -61,23 +61,21 @@
     NSNumber *windBearing = dictionary[@"windBearing"];
     NSNumber *uvIndex = dictionary[@"uvIndex"];
     
+    if ([summary isKindOfClass:[NSNull class]]) { summary = nil; }
+    if ([icon isKindOfClass:[NSNull class]]) { icon = nil; }
+    if ([precipProbability isKindOfClass:[NSNull class]]) { precipProbability = nil; }
+    if ([precipIntensity isKindOfClass:[NSNull class]]) { precipIntensity = nil; }
+    if ([precipType isKindOfClass:[NSNull class]]) { precipType = nil; }
+    if ([temperatureLow isKindOfClass:[NSNull class]]) { temperatureLow = nil; }
+    if ([temperatureHigh isKindOfClass:[NSNull class]]) { temperatureHigh = nil; }
+    if ([apparentTemperature isKindOfClass:[NSNull class]]) { apparentTemperature = nil; }
+    if ([humidity isKindOfClass:[NSNull class]]) { humidity = nil; }
+    if ([pressure isKindOfClass:[NSNull class]]) { pressure = nil; }
+    if ([windSpeed isKindOfClass:[NSNull class]]) { windSpeed = nil; }
+    if ([windBearing isKindOfClass:[NSNull class]]) { windBearing = nil; }
+    if ([uvIndex isKindOfClass:[NSNull class]]) { uvIndex = nil; }
     
-    
-    if (!(time &&
-          summary &&
-          icon &&
-          precipProbability &&
-          precipIntensity &&
-          precipType &&
-          temperatureLow &&
-          temperatureHigh &&
-          apparentTemperature &&
-          humidity &&
-          pressure &&
-          windSpeed &&
-          windBearing &&
-          uvIndex)) {
-        // This makes the initializer "failable"
+    if (!time) {
         return nil;
     }
     
