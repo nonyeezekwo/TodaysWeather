@@ -37,5 +37,16 @@
     NSLog(@"JSON: %@", json);
     
 }
+- (void)testLoadingCurrentWeather {
+
+    NSData *data = loadFile(@"CurrentWeather.json", [LSIWeatherForcast class]);
+    NSError *jsonError = nil;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+    if (jsonError) {
+        NSLog(@"Theres an error parssing: %@", jsonError);
+    }
+    NSLog(@"THE JSON: %@", json);
+    
+}
 
 @end
