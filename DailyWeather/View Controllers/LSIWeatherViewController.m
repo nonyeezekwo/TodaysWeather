@@ -19,6 +19,17 @@
 @property CLLocation *location;
 @property (nonatomic) CLPlacemark *placemark;
 
+// MARK:- OUTLETS
+@property (strong, nonatomic) IBOutlet UIImage *iconImage;
+@property (strong, nonatomic) IBOutlet UILabel *locationLabel;
+@property (strong, nonatomic) IBOutlet UILabel *summaryLabel;
+@property (strong, nonatomic) IBOutlet UILabel *tempLabel;
+@property (strong, nonatomic) IBOutlet UILabel *windLabel;
+@property (strong, nonatomic) IBOutlet UILabel *apparentLabel;
+@property (strong, nonatomic) IBOutlet UILabel *humidityLabel;
+@property (strong, nonatomic) IBOutlet UILabel *rainLabel;
+@property (strong, nonatomic) IBOutlet UILabel *uvLabel;
+
 @end
 
 // NOTE: You must declare the Category before the main implementation,
