@@ -189,6 +189,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="apparentLabel" destination="S0P-a8-YoP" id="09F-bP-6cF"/>
+                        <outlet property="humidityLabel" destination="jRW-aX-aKD" id="ITG-h7-4cD"/>
+                        <outlet property="locationLabel" destination="0fK-4T-5ob" id="Sij-xF-QjS"/>
+                        <outlet property="rainLabel" destination="0Vh-AN-iK0" id="RB9-F9-svO"/>
+                        <outlet property="summaryLabel" destination="TDX-rM-b9g" id="xXI-Ea-ehg"/>
+                        <outlet property="tempLabel" destination="eNB-Gh-ddF" id="U2o-WH-tJs"/>
+                        <outlet property="uvLabel" destination="jGK-aT-mcu" id="imv-cl-DQS"/>
+                        <outlet property="windLabel" destination="RYm-Cy-p81" id="Ros-gI-8Tf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
